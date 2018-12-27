@@ -1,0 +1,18 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "DKRenderer", "DKRenderer\DKRenderer.shproj", "{72C3AD7A-2326-4991-A8EC-D5653495C594}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		DKRenderer\DKRenderer.projitems*{72c3ad7a-2326-4991-a8ec-d5653495c594}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F9F6C77C-3451-4B7D-8D3B-3A0D3DF77F7F}
+	EndGlobalSection
+EndGlobal
