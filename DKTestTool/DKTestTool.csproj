@@ -49,5 +49,19 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DKBase\DKBase.csproj">
+      <Project>{037a9eab-e11d-47b1-9dbb-a26a29644962}</Project>
+      <Name>DKBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DKRenderEngine\DKRenderEngine.csproj">
+      <Project>{30ead646-6fbf-4075-9c30-af21a1fc8f55}</Project>
+      <Name>DKRenderEngine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DKRenderGeometry\DKRenderGeometry.csproj">
+      <Project>{52537146-2b21-49b8-ab92-f64f62086631}</Project>
+      <Name>DKRenderGeometry</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -41,7 +41,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Engine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Types\Image.cs" />
+    <Compile Include="Types\Pixel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DKBase\DKBase.csproj">
+      <Project>{037a9eab-e11d-47b1-9dbb-a26a29644962}</Project>
+      <Name>DKBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DKRenderGeometry\DKRenderGeometry.csproj">
+      <Project>{52537146-2b21-49b8-ab92-f64f62086631}</Project>
+      <Name>DKRenderGeometry</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
