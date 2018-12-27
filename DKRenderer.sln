@@ -3,11 +3,36 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "DKRenderer", "DKRenderer\DKRenderer.shproj", "{72C3AD7A-2326-4991-A8EC-D5653495C594}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DKTestTool", "DKTestTool\DKTestTool.csproj", "{1B9613E6-0D1C-467C-BBCB-41FEEF5FE059}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DKBase", "DKBase\DKBase.csproj", "{037A9EAB-E11D-47B1-9DBB-A26A29644962}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DKRenderEngine", "DKRenderEngine\DKRenderEngine.csproj", "{30EAD646-6FBF-4075-9C30-AF21A1FC8F55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DKRenderGeometry", "DKRenderGeometry\DKRenderGeometry.csproj", "{52537146-2B21-49B8-AB92-F64F62086631}"
 EndProject
 Global
-	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		DKRenderer\DKRenderer.projitems*{72c3ad7a-2326-4991-a8ec-d5653495c594}*SharedItemsImports = 13
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B9613E6-0D1C-467C-BBCB-41FEEF5FE059}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B9613E6-0D1C-467C-BBCB-41FEEF5FE059}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B9613E6-0D1C-467C-BBCB-41FEEF5FE059}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B9613E6-0D1C-467C-BBCB-41FEEF5FE059}.Release|Any CPU.Build.0 = Release|Any CPU
+		{037A9EAB-E11D-47B1-9DBB-A26A29644962}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{037A9EAB-E11D-47B1-9DBB-A26A29644962}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{037A9EAB-E11D-47B1-9DBB-A26A29644962}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{037A9EAB-E11D-47B1-9DBB-A26A29644962}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30EAD646-6FBF-4075-9C30-AF21A1FC8F55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30EAD646-6FBF-4075-9C30-AF21A1FC8F55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30EAD646-6FBF-4075-9C30-AF21A1FC8F55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30EAD646-6FBF-4075-9C30-AF21A1FC8F55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52537146-2B21-49B8-AB92-F64F62086631}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52537146-2B21-49B8-AB92-F64F62086631}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52537146-2B21-49B8-AB92-F64F62086631}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52537146-2B21-49B8-AB92-F64F62086631}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
