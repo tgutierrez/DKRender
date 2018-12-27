@@ -10,8 +10,8 @@ namespace DKRender.Base
     {
         int Height { get; }
         int Width { get; }
-        float FOV { get; }
-        float AspectRatio { get; }
-        float Angle { get; }
+        double FOV { get; }
+        double AspectRatio { get; }
+        double Angle { get; }
     }
 }

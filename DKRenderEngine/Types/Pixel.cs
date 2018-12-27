@@ -9,8 +9,8 @@ namespace DKRender.Engine.Types
 {
     public class Pixel : IColor
     {
-        public float R{ get; set; }
-        public float G{ get; set; }
-        public float B{ get; set; }
+        public double R{ get; set; }
+        public double G { get; set; }
+        public double B { get; set; }
     }
 }

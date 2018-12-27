@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace DKRender.Base.Types
 {
-    interface IVector
+    public interface IVector
     {
+        double X { get; }
+        double Y { get; }
+        double Z { get; }
+
+        void Normalize();
+
+        double Length();
     }
 }

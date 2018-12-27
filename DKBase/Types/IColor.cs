@@ -8,10 +8,10 @@ namespace DKRender.Base.Types
 {
     public interface IColor
     {
-        float R { get; }
+        double R { get; }
 
-        float G { get; }
+        double G { get; }
 
-        float B { get; }
+        double B { get; }
     }
 }

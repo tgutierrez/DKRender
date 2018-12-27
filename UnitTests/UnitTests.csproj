@@ -50,6 +50,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Engine\Render.cs" />
+    <Compile Include="Engine\Types\Camera\AspectRatio.cs" />
+    <Compile Include="Engine\Types\Camera\Angle.cs" />
+    <Compile Include="Engine\Types\Vector\Normalize.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
