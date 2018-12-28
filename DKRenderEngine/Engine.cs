@@ -1,4 +1,5 @@
 ﻿using DKRender.Base;
+using DKRender.Base.Types;
 using DKRender.Engine.Types;
 using System;
 using System.Collections.Generic;
@@ -12,7 +13,7 @@ namespace DKRender.Engine
 {
     public class Engine : IEngine
     {
-        public void Render(IScene scene)
+        public virtual IImage Render(IScene scene)
         {
             int height = scene.Camera.Height;
             int width = scene.Camera.Width;
@@ -32,9 +33,11 @@ namespace DKRender.Engine
                     image.Canvas[x, y] = Trace(new Vector(0, 0, 0), rayDirection, scene.Objects, 0);
                 }
             }
+
+            return image;
         }
 
-        public Pixel Trace(Vector origin, Vector direction, IEnumerable<IGeometryObject> objects, int depth)
+        public virtual Pixel Trace(Vector origin, Vector direction, IEnumerable<IGeometryObject> objects, int depth)
         {
             throw new NotImplementedException();
         }

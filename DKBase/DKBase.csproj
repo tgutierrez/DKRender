@@ -48,6 +48,7 @@
     <Compile Include="IScene.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Types\IColor.cs" />
+    <Compile Include="Types\IImage.cs" />
     <Compile Include="Types\IVector.cs" />
   </ItemGroup>
   <ItemGroup />

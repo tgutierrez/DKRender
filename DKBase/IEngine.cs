@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DKRender.Base.Types;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,6 @@ namespace DKRender.Base
         /// Renders a scene
         /// </summary>
         /// <param name="scene"></param>
-        void Render(IScene scene);
+        IImage Render(IScene scene);
     }
 }

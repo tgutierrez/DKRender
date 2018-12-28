@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DKRender.Base.Types;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,17 +7,12 @@ using System.Threading.Tasks;
 
 namespace DKRender.Engine.Types
 {
-    public class Image
+    public class Image : IImage
     {
-        private Pixel[,] _canvas;
-
-        public Pixel[,] Canvas
-        {
-            get { return _canvas; }
-        }
+        public IColor[,] Canvas {  get; private set; }
         public Image(int height, int width)
         {
-            _canvas = new Pixel[height, width];
+            Canvas = new Pixel[height, width];
         }
     }
 }

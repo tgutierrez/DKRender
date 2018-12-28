@@ -1,69 +1,51 @@
 ﻿using System;
-using System.Text;
-using System.Collections.Generic;
+using DKRender.Base;
+using Rhino.Mocks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections.Generic;
 
 namespace DKRender.UnitTests.Engine
 {
-    /// <summary>
-    /// Descripción resumida de Render
-    /// </summary>
     [TestClass]
     public class Render
     {
-        public Render()
-        {
-            //
-            // TODO: Agregar aquí la lógica del constructor
-            //
+        Rhino.Mocks.MockRepository _mocks;
+
+        [TestInitialize]
+        public void Init() {
+            _mocks = new Rhino.Mocks.MockRepository();
         }
 
-        private TestContext testContextInstance;
-
-        /// <summary>
-        ///Obtiene o establece el contexto de las pruebas que proporciona
-        ///información y funcionalidad para la serie de pruebas actual.
-        ///</summary>
-        public TestContext TestContext
-        {
-            get
-            {
-                return testContextInstance;
-            }
-            set
-            {
-                testContextInstance = value;
-            }
+        [TestCleanup]
+        public void Cleanum() {
+            _mocks.VerifyAll();
         }
 
-        #region Atributos de prueba adicionales
-        //
-        // Puede usar los siguientes atributos adicionales conforme escribe las pruebas:
-        //
-        // Use ClassInitialize para ejecutar el código antes de ejecutar la primera prueba en la clase
-        // [ClassInitialize()]
-        // public static void MyClassInitialize(TestContext testContext) { }
-        //
-        // Use ClassCleanup para ejecutar el código una vez ejecutadas todas las pruebas en una clase
-        // [ClassCleanup()]
-        // public static void MyClassCleanup() { }
-        //
-        // Usar TestInitialize para ejecutar el código antes de ejecutar cada prueba 
-        // [TestInitialize()]
-        // public void MyTestInitialize() { }
-        //
-        // Use TestCleanup para ejecutar el código una vez ejecutadas todas las pruebas
-        // [TestCleanup()]
-        // public void MyTestCleanup() { }
-        //
-        #endregion
 
         [TestMethod]
-        public void TestMethod1()
+        public void CanRenderSomething()
         {
-            //
-            // TODO: Agregar aquí la lógica de las pruebas
-            //
+            // Setup
+            var testScene = CreateTestScene();
+            // Mock
+            var renderer = _mocks.PartialMock<DKRender.Engine.Engine>();
+
+            renderer.Expect(r => r.Trace(Arg<DKRender.Engine.Types.Vector>.Is.Anything,
+                                         Arg<DKRender.Engine.Types.Vector>.Is.Anything,
+                                         Arg<IEnumerable<IGeometryObject>>.Is.Anything,
+                                         Arg<int>.Is.Equal(0))).Return(new DKRender.Engine.Types.Pixel()).Repeat.Times(4);
+            // Execute
+            _mocks.ReplayAll();
+            var image = renderer.Render(testScene);
+            
+            // Assert
+            // It should output a 4x4 image....
+            Assert.AreEqual(4, image.Canvas.Length);
+        }
+
+        private IScene CreateTestScene()
+        {
+            return new DKRender.Engine.Types.Scene(new DKRender.Engine.Types.Camera(2, 2, 30));
         }
     }
 }

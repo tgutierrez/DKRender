@@ -46,6 +46,7 @@
     <Compile Include="Types\Camera.cs" />
     <Compile Include="Types\Image.cs" />
     <Compile Include="Types\Pixel.cs" />
+    <Compile Include="Types\Scene.cs" />
     <Compile Include="Types\Vector.cs" />
   </ItemGroup>
   <ItemGroup>
